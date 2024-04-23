@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "accounts",
     "corsheaders",
     'rest_framework',
 ]
@@ -135,3 +136,13 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 EMAIL_USE_TLS = True
+
+
+#custom user model for superuser account
+AUTH_USER_MODEL = 'accounts.User'
+
+
+# Frontend/Backend Site Domain for Password Reset Link and Account Activation Link
+# If using ReactJS VueJS NextJS NuxtJS then you can replace with frontend domain
+SITE_DOMAIN = "http://localhost:8000"
+SITE_NAME = "Local Host"
